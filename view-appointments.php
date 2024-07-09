@@ -88,7 +88,7 @@ if(isset($_GET['delid']))
 <div class="col-lg-8">
 <div class="page-header-title">
 <div class="d-inline">
-<h4>Voir les pointages</h4>
+<h4>Voir les Consultations</h4>
 
 </div>
 </div>
@@ -99,9 +99,9 @@ if(isset($_GET['delid']))
 <li class="breadcrumb-item">
 <a href="index.php"> <i class="feather icon-home"></i> </a>
 </li>
-<li class="breadcrumb-item"><a>Voir les pointages</a>
+<li class="breadcrumb-item"><a>Voir les Consultations</a>
 </li>
-<li class="breadcrumb-item"><a href="#">Voir les pointages</a>
+<li class="breadcrumb-item"><a href="#">Voir les Consultations</a>
 </li>
 </ul>
 </div>

@@ -188,7 +188,7 @@ $row_manage = mysqli_fetch_array($result_manage);
   echo mysqli_num_rows($qsql);
 ?>
 </h4>
-<h6 class="text-white m-b-0">Pointages d'aujourd'hui
+<h6 class="text-white m-b-0">Consultations d'aujourd'hui
 </h6>
 </div>
 <div class="col-4 text-right">
@@ -247,11 +247,11 @@ $row_manage = mysqli_fetch_array($result_manage);
           <!-- Nav tabs -->
           <ul class="nav nav-tabs md-tabs" role="tablist">
               <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#home3" role="tab">Historique de pointages</a>
+                  <a class="nav-link active" data-toggle="tab" href="#home3" role="tab">Historique de Consultations</a>
                   <div class="slide"></div>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#profile3" role="tab">Pointages</a>
+                  <a class="nav-link" data-toggle="tab" href="#profile3" role="tab">Consultations</a>
                   <div class="slide"></div>
               </li>
           </ul>
@@ -265,12 +265,12 @@ $row_manage = mysqli_fetch_array($result_manage);
               </div>
               <div class="tab-pane" id="profile3" role="tabpanel">
                   <p class="m-0">
-                    <b>Pointages</b>
+                    <b>Consultations</b>
                       <?php
                         if(mysqli_num_rows($qsqlpatientappointment) == 0)
                         {
                             ?>
-                        <h3>Pas de pointages trouvés.. </h3>
+                        <h3>Pas de Consultations trouvés.. </h3>
                         <?php
                         }
                         else
@@ -298,7 +298,7 @@ $row_manage = mysqli_fetch_array($result_manage);
 
   <div class="card">
   <div class="card-header">
-        <h2>Pointages</h2>
+        <h2>Consultations</h2>
   </div>
   <div class="card-block">
   <div class="table-responsive dt-responsive">
@@ -350,7 +350,7 @@ $row_manage = mysqli_fetch_array($result_manage);
   <tfoot>
   <tr>
       <th>Détails du patient</th>
-      <th>Date & Heure des pointages</th>
+      <th>Date & Heure des Consultations</th>
       <th>Départements</th>
       <th>Docteurs</th>
       <th>Raisons</th>

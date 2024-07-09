@@ -33,7 +33,7 @@
 <li class="pcoded-hasmenu">
     <a href="javascript:void(0)">
         <span class="pcoded-micon"><i class="feather icon-edit"></i></span>
-        <span class="pcoded-mtext">Pointages</span>
+        <span class="pcoded-mtext">Consultations</span>
     </a>
     <ul class="pcoded-submenu">
     <?php if(($_SESSION['user'] == 'admin') || ($_SESSION['user'] == 'patient')) { ?>
@@ -46,19 +46,19 @@
     <?php if(($_SESSION['user'] == 'admin') || ($_SESSION['user'] == 'doctor')) { ?>
         <li class="">
             <a href="view-pending-appointment.php">
-                <span class="pcoded-mtext">Voir Pointages en cours</span>
+                <span class="pcoded-mtext">Voir Consultations en cours</span>
             </a>
         </li>
         <li class="">
             <a href="view-appointments-approved.php">
-                <span class="pcoded-mtext">Voir pointages approuvés</span>
+                <span class="pcoded-mtext">Voir Consultations approuvés</span>
             </a>
         </li>
     <?php } ?>
     <?php if($_SESSION['user'] == 'patient') { ?>
         <li class="">
             <a href="view-appointments.php">
-                <span class="pcoded-mtext">Voir pointages</span>
+                <span class="pcoded-mtext">Voir Consultations</span>
             </a>
         </li>
     <?php } ?>
