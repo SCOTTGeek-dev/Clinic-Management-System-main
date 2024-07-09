@@ -80,7 +80,7 @@ if(isset($_POST["btn_web"]))
    $q1="UPDATE `manage_website` SET `title`='$title',`short_title`='$short_title',`logo`='$website_logo',`footer`='$footer' ,`currency_code`= '$currency_code',`currency_symbol`= '$currency_symbol',`login_logo`='$login_logo',`invoice_logo`='$invoice_logo' , `background_login_image` = '$background_login_image'";
   if ($conn->query($q1) === TRUE) {
    
-      $_SESSION['success']='Record Successfully Updated';
+      $_SESSION['success']='Enregistrement mis à jour avec succés';
       ?>
       <script type="text/javascript">
         window.location = "manage_website.php";
@@ -89,7 +89,7 @@ if(isset($_POST["btn_web"]))
 
 } else {
    
-      $_SESSION['error']='Something Went Wrong';
+      $_SESSION['error']='Quelque chose est mal passée';
 }
   ?>
   <script>
@@ -129,7 +129,7 @@ while($row=mysqli_fetch_array($query))
                     <h3 class="text-primary">Website Management</h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Accueil</a></li>
                         <li class="breadcrumb-item active">Website Management</li>
                     </ol>
                 </div>
@@ -151,7 +151,7 @@ while($row=mysqli_fetch_array($query))
                                     <form class="form-horizontal" method="POST" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <div class="row">
-                                                <label class="col-sm-3 control-label">Title</label>
+                                                <label class="col-sm-3 control-label">Titre</label>
                                                 <div class="col-sm-9">
                                                     <input type="text"  value="<?php echo $title;?>"  name="title" class="form-control">
                                                 </div>
@@ -160,7 +160,7 @@ while($row=mysqli_fetch_array($query))
 
                                          <div class="form-group">
                                             <div class="row">
-                                                <label class="col-sm-3 control-label">Short Title</label>
+                                                <label class="col-sm-3 control-label">Titre court</label>
                                                 <div class="col-sm-9">
                                                     <input type="text"  value="<?php echo $short_title;?>"  name="short_title" class="form-control">
                                                 </div>
