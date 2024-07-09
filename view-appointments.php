@@ -156,13 +156,15 @@ if(isset($_GET['delid']))
       $sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]' and delete_status='0'";
       $qsqldoc = mysqli_query($conn,$sqldoc);
       $rsdoc = mysqli_fetch_array($qsqldoc);
-        echo "<tr>
-          <td>&nbsp;$rspat[patientname]<br>&nbsp;$rspat[mobileno]</td>
-       <td>&nbsp;" . date("d-M-Y",strtotime($rs['appointmentdate'])) . " &nbsp; " . date("H:i A",strtotime($rs['appointmenttime'])) . "</td>
-        <td>&nbsp;$rsdept[departmentname]</td>
-         <td>&nbsp;$rsdoc[doctorname]</td>
-          <td>&nbsp;$rs[app_reason]</td>
-          <td>&nbsp;$rs[status]</td>";
+      echo "<tr>
+      <td>&nbsp;{$rspat['patientname']}<br>&nbsp;{$rspat['mobileno']}</td>
+      <td>&nbsp;" . date("d-M-Y", strtotime($rs['appointmentdate'])) . " &nbsp; " . date("H:i A", strtotime($rs['appointmenttime'])) . "</td>
+      <td>&nbsp;{$rsdept['departmentname']}</td>
+      <td>&nbsp;{$rsdoc['doctorname']}</td>
+      <td>&nbsp;{$rs['app_reason']}</td>
+      <td>&nbsp;{$rs['status']}</td>
+  </tr>";
+
 if(($_SESSION['user'] == 'admin') || ($_SESSION['user'] == 'doctor')){
           echo "<td><div align='center'>";
       if($rs['status'] != "Approved")
