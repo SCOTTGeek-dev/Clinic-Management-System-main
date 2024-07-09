@@ -156,14 +156,24 @@ if(isset($_GET['delid']))
       $sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]' and delete_status='0'";
       $qsqldoc = mysqli_query($conn,$sqldoc);
       $rsdoc = mysqli_fetch_array($qsqldoc);
-      echo "<tr>
-      <td>&nbsp;{$rspat['patientname']}<br>&nbsp;{$rspat['mobileno']}</td>
-      <td>&nbsp;" . date("d-M-Y", strtotime($rs['appointmentdate'])) . " &nbsp; " . date("H:i A", strtotime($rs['appointmenttime'])) . "</td>
-      <td>&nbsp;{$rsdept['departmentname']}</td>
-      <td>&nbsp;{$rsdoc['doctorname']}</td>
-      <td>&nbsp;{$rs['app_reason']}</td>
-      <td>&nbsp;{$rs['status']}</td>
-  </tr>";
+      // Check if the necessary keys exist in the arrays
+$patientName = isset($rspat['patientname']) ? $rspat['patientname'] : 'N/A';
+$mobileNo = isset($rspat['mobileno']) ? $rspat['mobileno'] : 'N/A';
+$appointmentDate = isset($rs['appointmentdate']) ? date("d-M-Y", strtotime($rs['appointmentdate'])) : 'N/A';
+$appointmentTime = isset($rs['appointmenttime']) ? date("H:i A", strtotime($rs['appointmenttime'])) : 'N/A';
+$departmentName = isset($rsdept['departmentname']) ? $rsdept['departmentname'] : 'N/A';
+$doctorName = isset($rsdoc['doctorname']) ? $rsdoc['doctorname'] : 'N/A';
+$appReason = isset($rs['app_reason']) ? $rs['app_reason'] : 'N/A';
+$status = isset($rs['status']) ? $rs['status'] : 'N/A';
+
+echo "<tr>
+          <td>&nbsp;$patientName<br>&nbsp;$mobileNo</td>
+          <td>&nbsp;$appointmentDate &nbsp; $appointmentTime</td>
+          <td>&nbsp;$departmentName</td>
+          <td>&nbsp;$doctorName</td>
+          <td>&nbsp;$appReason</td>
+          <td>&nbsp;$status</td>
+      </tr>";
 
 if(($_SESSION['user'] == 'admin') || ($_SESSION['user'] == 'doctor')){
           echo "<td><div align='center'>";
