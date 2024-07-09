@@ -243,7 +243,7 @@ $row_manage = mysqli_fetch_array($result_manage);
       <!-- Row start -->
       <div class="row">
         <div class="col-lg-12">
-          <div class="sub-title"><h2>Welcome <?php echo ''.$_SESSION['fname']; ?> !!</h2></div>
+          <div class="sub-title"><h2>Bienvenue Mr. <?php echo ''.$_SESSION['fname']; ?> !!</h2></div>
           <!-- Nav tabs -->
           <ul class="nav nav-tabs md-tabs" role="tablist">
               <li class="nav-item">
